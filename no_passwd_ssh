@@ -1,0 +1,13 @@
+# Na lokalnej maszynie w terminalu wpisać poniższą linijkę i gdy pojawią się pytania nacisnąc po prostu 3x enter
+ssh-keygen -t rsa
+
+# tworzymy katalog na kogni
+ssh user@kogniX.ii.uj.edu.pl mkdir -p .ssh
+
+# kopiujemy klucz z lokalnej maszyny na kogni
+cat /home/user/.ssh/id_rsa.pub | ssh user@kogniX.ii.uj.edu.pl 'cat >> .ssh/authorized_keys'
+
+# ustawiamy odpowiednie uprawnienia
+ssh user@kogniX.ii.uj.edu.pl "chmod 700 .ssh; chmod 640 .ssh/authorized_keys"
+
+echo done

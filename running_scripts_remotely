@@ -1,0 +1,7 @@
+ssh user@kogniX.ii.uj.edu.pl "nohup python X.py > output_path &"
+
+uwagii:
+- gdy pogram działa, to ssh user@kogniX.ii.uj.edu.pl "tail -f output_path" monitoruje postępy. Ewentualnie less zamiast tail -f.
+- oczywiście python X.py można zastąpić dowolnym wywołaniem skryptu/programu
+- output_path - tam zostanie utworzony plik (lub nadpisany jeśli istnieje) z wyjściem (w tym błędy) z komendy 'python X.py'
+- screen jest overkillem do naszych potrzeb, ale jeśli będzie potrzeba innej funkcjonalności, to użyjemy screena

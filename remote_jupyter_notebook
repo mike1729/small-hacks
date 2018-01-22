@@ -1,0 +1,8 @@
+# odpalamy na kogniX
+jupyter notebook --no-browser --port=8889
+
+# odpalamy na lokalnej maszynie
+ssh -N -f -L localhost:8888:localhost:8889 remote_user@remote_host
+
+# jupyter notebook wypisuje w konsoli adres wraz z tokenem, który trzeba przekopiować do swojej przeglądarki
+# ! pamiętać, żeby zmienić w tym adresie port z 8888 na 8889

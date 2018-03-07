@@ -1,0 +1,3 @@
+# Za pomoca RDP logujemy sie na kogni2
+# Uruchamiamy Powershell
+pscp ścieżka_na_kogni2 user@server_name:ścieżka_docelowa
